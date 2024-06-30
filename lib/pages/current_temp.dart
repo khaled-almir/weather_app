@@ -26,10 +26,10 @@ class _CurrentTempState extends State<CurrentTemp> {
             child: Column(
               children: [
                 Text('Location: ${weather.location}'),
-                Text('Temperature: ${weather.temperature}°C'),
-                Text('Clouds: ${weather.clouds}%'),
-                Text('Humidity: ${weather.humidity}%'),
-                Text('Wind: ${weather.wind} m/s'),
+                Text('Temperature: ${weather.temperature.toString()}°C'),
+                Text('Clouds: ${weather.clouds.toString()}%'),
+                Text('Humidity: ${weather.humidity.toString()}%'),
+                Text('Wind: ${weather.wind.toString()} m/s'),
               ],
             ),
           );
