@@ -1,9 +1,8 @@
-
 class CurrentWeatherModel {
    String location ;
    double temperature ;
-   double clouds ;
-   double humidity ;
+   int clouds ;
+   int humidity ;
    double wind ;
 
 

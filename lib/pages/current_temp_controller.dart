@@ -17,15 +17,15 @@ class CurrentTempController extends GetxController{
   @override
   onInit(){
     super.onInit();
-    fetchWeather('tripoli');
+    fetchWeather();
   }
-  void fetchWeather(String location) async {
+  void fetchWeather() async {
     try {
       isLoading(true);
-      var data = await apiServices.get(location);
-      currentWeather.value = data;
+      var data = await apiServices.get();
+      currentWeather.value = CurrentWeatherModel.fromJson(data);
     }catch(e){
-      print('Error: $e');
+      print('Error1: $e');
   }finally{
     isLoading(false);
   }
